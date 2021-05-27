@@ -1,0 +1,59 @@
+{
+  "name": "h5-widgets",
+  "version": "1.0.0",
+  "private": false,
+  "main": "dist/h5-widgets.umd.js",
+  "module": "dist/h5-widgets.esm.js",
+  "types": "dist/index.d.ts",
+  "author": "guotingjie",
+  "license": "MIT",
+  "keywords": [
+    "vue3",
+    "component"
+  ],
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "npm run clean && npm run build:esm && npm run build:umd",
+    "build:esm": "rollup --config build/rollup.esm.config.js",
+    "build:umd": "rollup --config build/rollup.umd.config.js",
+    "prepublishOnly": "npm run build",
+    "lint": "vue-cli-service lint",
+    "clean": "rimraf ./dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "githttps://github.com/answer518/h5-widgets.git"
+  },
+  "dependencies": {
+    "core-js": "^3.6.5",
+    "lodash-es": "^4.17.20"
+  },
+  "files": [
+    "dist"
+  ],
+  "peerDependencies": {
+    "vue": "^3.0.0"
+  },
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^13.0.0",
+    "@rollup/plugin-typescript": "^8.2.1",
+    "@types/lodash-es": "^4.17.4",
+    "@typescript-eslint/eslint-plugin": "^2.33.0",
+    "@typescript-eslint/parser": "^2.33.0",
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-eslint": "~4.5.0",
+    "@vue/cli-plugin-typescript": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "@vue/compiler-sfc": "^3.0.0",
+    "@vue/eslint-config-typescript": "^5.0.2",
+    "eslint": "^6.7.2",
+    "eslint-plugin-vue": "^7.0.0-0",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.50.1",
+    "rollup-plugin-css-only": "^3.1.0",
+    "rollup-plugin-typescript2": "^0.30.0",
+    "rollup-plugin-vue": "^6.0.0",
+    "typescript": "~3.9.3",
+    "vue": "^3.0.0"
+  }
+}
